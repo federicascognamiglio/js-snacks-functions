@@ -16,8 +16,8 @@ function wordsByInitials(wordArray, letter) {
     let newArray = [];
     for (let i = 0; i < wordArray.length; i++) {
         const curItem = wordArray[i];
-        if (curItem.charAt(0) === letter) {
-            newArray.push(curItem[i]);
+        if (isNaN(curItem) && (curItem.charAt(0) === letter)) {
+            newArray.push(curItem);
         }
     }
     return newArray;

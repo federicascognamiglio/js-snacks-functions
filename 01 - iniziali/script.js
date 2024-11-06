@@ -14,7 +14,7 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 function initialsArray(arrayNames) {
     let newArray = [];
     for (let i = 0; i < arrayNames.length; i++) {
-        let curItem = arrayNames[i];
+        const curItem = arrayNames[i];
         if (isNaN(curItem)) {
             newArray.push(curItem.charAt(0));
         } else {
