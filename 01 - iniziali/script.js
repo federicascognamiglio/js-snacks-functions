@@ -3,18 +3,18 @@ restituisca nuovo un array con le iniziali di ogni parola dell'array fornito */
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 
-
 // Dichiara la funzione qui.
+
 /**
- * Funzione che ritorna le iniziali di ogni elemento di un array
- * @param {array} array
+ * Funzione che ritorna un nuovo array con le iniziali di ogni elemento di un array di nomi
+ * @param {array} arrayNames
  * @returns {array}
  */
 
-function initialsArray(array) {
+function initialsArray(arrayNames) {
     let newArray = [];
-    for (let i = 0; i < array.length; i++) {
-        let curItem = array[i];
+    for (let i = 0; i < arrayNames.length; i++) {
+        let curItem = arrayNames[i];
         if (isNaN(curItem)) {
             newArray.push(curItem.charAt(0));
         } else {
@@ -25,6 +25,7 @@ function initialsArray(array) {
 }
 
 // Invoca la funzione qui e stampa il risultato in console
+
 const initials = initialsArray(names);
 console.log(initials);
 
